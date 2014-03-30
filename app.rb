@@ -2,6 +2,8 @@ require 'sinatra/base'
 
 class App<Sinatra::Application
 
+  NEW_TASK = ""
+
   get '/' do
     erb :index
   end
@@ -11,6 +13,7 @@ class App<Sinatra::Application
   end
 
   post '/' do
-  new_task = params['new_task']
+  NEW_TASK = params['new_task']
+    erb :index
   end
 end
